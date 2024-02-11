@@ -40,7 +40,7 @@ platform :ios do
     )
 
     previous_build_number = latest_testflight_build_number(
-      app_identifier: "ru.artpancreas.#{TEAMID}.FreeAPS",
+      app_identifier: "ru.artpancreas.#{TEAMID}.FreeAPS3",
       api_key: api_key,
     )
 
@@ -55,7 +55,7 @@ platform :ios do
       type: "appstore",
       git_basic_authorization: Base64.strict_encode64("#{GITHUB_REPOSITORY_OWNER}:#{GH_PAT}"),
       app_identifier: [
-        "ru.artpancreas.#{TEAMID}.FreeAPS",
+        "ru.artpancreas.#{TEAMID}.FreeAPS3",
         "ru.artpancreas.#{TEAMID}.FreeAPS.watchkitapp",
         "ru.artpancreas.#{TEAMID}.FreeAPS.watchkitapp.watchkitextension",
         "ru.artpancreas.#{TEAMID}.FreeAPS.LiveActivity"
@@ -63,7 +63,7 @@ platform :ios do
     )
 
     previous_build_number = latest_testflight_build_number(
-      app_identifier: "ru.artpancreas.#{TEAMID}.FreeAPS",
+      app_identifier: "ru.artpancreas.#{TEAMID}.FreeAPS3",
       api_key: api_key,
     )
 
@@ -80,7 +80,7 @@ platform :ios do
 
     update_code_signing_settings(
       path: "#{GITHUB_WORKSPACE}/FreeAPS.xcodeproj",
-      profile_name: mapping["ru.artpancreas.#{TEAMID}.FreeAPS"],
+      profile_name: mapping["ru.artpancreas.#{TEAMID}.FreeAPS3"],
       code_sign_identity: "iPhone Distribution",
       targets: ["FreeAPS"]
     )
